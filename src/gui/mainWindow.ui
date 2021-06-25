@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1468</width>
+    <height>943</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>图像配准</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="base_wrap_img_layout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="ImgFrame" name="base_frame">
+          <property name="toolTipDuration">
+           <number>0</number>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="GraphicsView" name="baseImgView">
+             <property name="contextMenuPolicy">
+              <enum>Qt::DefaultContextMenu</enum>
+             </property>
+             <property name="toolTipDuration">
+              <number>0</number>
+             </property>
+             <property name="lineWidth">
+              <number>0</number>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+             <property name="horizontalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustIgnored</enum>
+             </property>
+             <property name="viewportUpdateMode">
+              <enum>QGraphicsView::FullViewportUpdate</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="ImgFrame" name="wrap_frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="GraphicsView" name="wrapImgView">
+             <property name="contextMenuPolicy">
+              <enum>Qt::DefaultContextMenu</enum>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+             <property name="horizontalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustIgnored</enum>
+             </property>
+             <property name="viewportUpdateMode">
+              <enum>QGraphicsView::FullViewportUpdate</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="horizontalSpacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="bnts_gridLayout">
+          <item row="0" column="1">
+           <widget class="QPushButton" name="baseZoomWinBtn">
+            <property name="text">
+             <string>基准缩放窗口</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="baseScrollWinBtn">
+            <property name="text">
+             <string>基准滚动窗口</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="wrapScrollWinBtn">
+            <property name="text">
+             <string>待配准滚动窗口</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="wrapZoomWinBtn">
+            <property name="text">
+             <string>待配准缩放窗口</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1468</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="fileM">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="openBaseImageA"/>
+    <addaction name="openWrapImageA"/>
+    <addaction name="separator"/>
+    <addaction name="exitA"/>
+   </widget>
+   <widget class="QMenu" name="settingM">
+    <property name="title">
+     <string>设置(&amp;S</string>
+    </property>
+    <addaction name="set_action"/>
+   </widget>
+   <widget class="QMenu" name="imgProcessM">
+    <property name="title">
+     <string>图像处理(&amp;I)</string>
+    </property>
+    <addaction name="autoResA"/>
+    <addaction name="manTileSelA"/>
+   </widget>
+   <widget class="QMenu" name="helpM">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="help_Action"/>
+   </widget>
+   <addaction name="fileM"/>
+   <addaction name="imgProcessM"/>
+   <addaction name="settingM"/>
+   <addaction name="helpM"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>菜单栏</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+   <addaction name="openBaseImageA"/>
+   <addaction name="openWrapImageA"/>
+   <addaction name="separator"/>
+   <addaction name="autoResA"/>
+   <addaction name="manTileSelA"/>
+   <addaction name="separator"/>
+   <addaction name="set_action"/>
+   <addaction name="separator"/>
+   <addaction name="help_Action"/>
+  </widget>
+  <action name="openBaseImageA">
+   <property name="icon">
+    <iconset>
+     <normaloff>.</normaloff>
+     <normalon>:/menu/icons/document-open.png</normalon>.</iconset>
+   </property>
+   <property name="text">
+    <string>打开基准图像</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+    </font>
+   </property>
+  </action>
+  <action name="openWrapImageA">
+   <property name="icon">
+    <iconset theme=":/menu/icons/document-open.svg">
+     <normaloff>.</normaloff>
+     <normalon>:/menu/icons/document-open.png</normalon>.</iconset>
+   </property>
+   <property name="text">
+    <string>打开待匹配图像</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+    </font>
+   </property>
+  </action>
+  <action name="exitA">
+   <property name="icon">
+    <iconset theme=":/menu/icons/application-exit.svg">
+     <normaloff>.</normaloff>
+     <normalon>:/menu/icons/application-exit.png</normalon>.</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+    </font>
+   </property>
+  </action>
+  <action name="action">
+   <property name="icon">
+    <iconset>
+     <normalon>:/menu/icons/auto.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>自动配准</string>
+   </property>
+  </action>
+  <action name="autoResA">
+   <property name="icon">
+    <iconset>
+     <normalon>:/menu/icons/auto.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>自动配准</string>
+   </property>
+  </action>
+  <action name="manTileSelA">
+   <property name="icon">
+    <iconset theme=":/menu/icons/selection.svg&#10;">
+     <normaloff>.</normaloff>
+     <normalon>:/menu/icons/selection.png</normalon>.</iconset>
+   </property>
+   <property name="text">
+    <string>同名点选择</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string>test</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+    </font>
+   </property>
+  </action>
+  <action name="set_action">
+   <property name="icon">
+    <iconset theme=":/menu/icons/preferences-system.svg">
+     <normaloff>.</normaloff>
+     <normalon>:/menu/icons/preferences-system.png</normalon>.</iconset>
+   </property>
+   <property name="text">
+    <string>设置</string>
+   </property>
+  </action>
+  <action name="help_Action">
+   <property name="icon">
+    <iconset theme=":/menu/icons/help.svg">
+     <normaloff>.</normaloff>
+     <normalon>:/menu/icons/help.png</normalon>.</iconset>
+   </property>
+   <property name="text">
+    <string>帮助</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="icon">
+    <iconset>
+     <normalon>:/menu/icons/selection.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>添加点</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>待配准图像缩放</string>
+   </property>
+  </action>
+  <action name="actionTest_2">
+   <property name="text">
+    <string>test</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">imgViewPort.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ImgFrame</class>
+   <extends>QFrame</extends>
+   <header location="global">imgframe.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../data/icon_r.qrc"/>
+ </resources>
+ <connections/>
+</ui>

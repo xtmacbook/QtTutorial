@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TileListsWin</class>
+ <widget class="QMainWindow" name="TileListsWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>873</width>
+    <height>448</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>同名点列表</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="6">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="onAoffBtn">
+          <property name="text">
+           <string>开/关</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="delBtn">
+          <property name="text">
+           <string>删除最后一个点</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QPushButton" name="showHideBtn">
+          <property name="text">
+           <string>隐藏列表</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="updateBtn">
+          <property name="text">
+           <string>更新</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="locationBtn">
+          <property name="text">
+           <string>定位</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="delBtn_c">
+          <property name="text">
+           <string>删除</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <widget class="TreeView" name="view">
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>873</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileM">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="loatTileA"/>
+    <addaction name="saveTileA"/>
+    <addaction name="separator"/>
+    <addaction name="cancelA"/>
+   </widget>
+   <widget class="QMenu" name="optionM">
+    <property name="title">
+     <string>选项  </string>
+    </property>
+    <addaction name="sortAction"/>
+    <addaction name="separator"/>
+    <addaction name="emptyTiles"/>
+   </widget>
+   <addaction name="fileM"/>
+   <addaction name="optionM"/>
+  </widget>
+  <action name="saveTileA">
+   <property name="icon">
+    <iconset theme=":/menu/icons/document-save-as.svg">
+     <normaloff>.</normaloff>
+     <normalon>:/menu/icons/document-save-as.png</normalon>.</iconset>
+   </property>
+   <property name="text">
+    <string>保存同名点</string>
+   </property>
+  </action>
+  <action name="cancelA">
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </action>
+  <action name="sortAction">
+   <property name="icon">
+    <iconset theme=":/menu/icons/sort.svg">
+     <normaloff>.</normaloff>
+     <normalon>:/menu/icons/sort.png</normalon>.</iconset>
+   </property>
+   <property name="text">
+    <string>误差排序</string>
+   </property>
+  </action>
+  <action name="emptyTiles">
+   <property name="text">
+    <string>清空点</string>
+   </property>
+  </action>
+  <action name="loatTileA">
+   <property name="icon">
+    <iconset theme=":/menu/icons/document-open.svg">
+     <normaloff>.</normaloff>
+     <normalon>:/menu/icons/document-open.png</normalon>.</iconset>
+   </property>
+   <property name="text">
+    <string>加载同名点</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TreeView</class>
+   <extends>QTreeView</extends>
+   <header>treeView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../data/icon_r.qrc"/>
+ </resources>
+ <connections/>
+</ui>
