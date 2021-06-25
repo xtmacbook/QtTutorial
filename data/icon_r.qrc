@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/mainWindow">
+        <file>icons/128x128/spot.png</file>
+    </qresource>
+	<qresource prefix="/menu">
+        <file>icons/document-open.png</file>
+		<file>icons/document-save-as.png</file>
+		<file>icons/application-exit.png</file>
+		<file>icons/preferences-system.png</file>
+		<file>icons/sort.png</file>
+		<file>icons/help.png</file>
+		<file>icons/selection.png</file> 
+		<file>icons/auto.png</file>
+    </qresource>
+</RCC>
